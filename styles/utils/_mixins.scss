@@ -1,0 +1,39 @@
+@mixin grid($col) {
+    display: grid;
+    grid-template-columns: repeat($col, 1fr);
+    gap: 0rem 1.2rem;
+    align-items: start;
+  }
+  
+  @mixin position($top, $right: $top, $bottom: $top, $left: $right) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+  }
+  
+  @mixin noMargin() {
+      &:first-of-type {
+          margin-left: 0;
+      }
+      &:last-of-type {
+          margin-right: 0;
+      }
+  }
+  
+  @mixin resetAppearance() {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    -webkit-border-radius: 0px;
+  }
+  
+  @mixin btResetAppearance() {
+      @include resetAppearance();
+      border: none;
+    border-radius: none;
+      background: none;
+      cursor: pointer;
+      outline: none;
+    resize: none;
+  }

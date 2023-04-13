@@ -1,0 +1,60 @@
+/*
+    - reset default element style
+    - set 10px to 1rem
+    - set line-height to golden ratio
+*/
+
+* {
+    box-sizing: border-box;
+    font-display: swap;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent; /* pour retirer la mise en avant */
+  }
+  
+  body {
+    font-family: $font;
+    font-weight: $regular;
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 1.618;
+  }
+  
+  html { 
+    font-size: 62.5%; 
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+    display:block;
+  }
+  
+  svg {
+    display: block;
+  }
+  
+  img {
+    display:block;
+    width: 100%;
+  }
+  
+  ul, li {
+    list-style-type: none;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+  
+  input, textarea, button, select {
+    @include btResetAppearance();
+  }
+  
